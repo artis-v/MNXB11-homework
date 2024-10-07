@@ -1,0 +1,132 @@
+Only in /home/artis: .apptainer
+Only in /home/artis: .bash_history
+diff -y /etc/skel/.bash_logout /home/artis/.bash_logout
+# ~/.bash_logout						# ~/.bash_logout
+
+Only in /home/artis: .bash_logout~
+diff -y /etc/skel/.bash_profile /home/artis/.bash_profile
+# .bash_profile							# .bash_profile
+
+# Get the aliases and functions					# Get the aliases and functions
+if [ -f ~/.bashrc ]; then					if [ -f ~/.bashrc ]; then
+	. ~/.bashrc							. ~/.bashrc
+fi								fi
+
+# User specific environment and startup programs		# User specific environment and startup programs
+							      >	export PATH="/projects/hep/fs10/mnxb11/bin:$PATH"Only in /home/artis: .bash_profile~
+diff -y /etc/skel/.bashrc /home/artis/.bashrc
+# .bashrc							# .bashrc
+
+# Source global definitions					# Source global definitions
+if [ -f /etc/bashrc ]; then					if [ -f /etc/bashrc ]; then
+	. /etc/bashrc							. /etc/bashrc
+fi								fi
+
+# User specific environment					# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]		if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then								then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"			    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi								fi
+export PATH							export PATH
+
+# Uncomment the following line if you don't like systemctl's 	# Uncomment the following line if you don't like systemctl's 
+# export SYSTEMD_PAGER=						# export SYSTEMD_PAGER=
+
+# User specific aliases and functions				# User specific aliases and functions
+if [ -d ~/.bashrc.d ]; then					if [ -d ~/.bashrc.d ]; then
+	for rc in ~/.bashrc.d/*; do					for rc in ~/.bashrc.d/*; do
+		if [ -f "$rc" ]; then						if [ -f "$rc" ]; then
+			. "$rc"								. "$rc"
+		fi								fi
+	done								done
+fi								fi
+
+unset rc							unset rc
+Only in /home/artis: .bashrc~
+Only in /home/artis: .cache
+Only in /home/artis: .config
+Only in /home/artis: Desktop
+Only in /home/artis: Documents
+Only in /home/artis: Downloads
+diff -y /etc/skel/.emacs /home/artis/.emacs
+;; .emacs							;; .emacs
+
+(custom-set-variables						(custom-set-variables
+ ;; uncomment to always end a file with a newline		 ;; uncomment to always end a file with a newline
+ ;'(require-final-newline t)					 ;'(require-final-newline t)
+ ;; uncomment to disable loading of "default.el" at startup	 ;; uncomment to disable loading of "default.el" at startup
+ ;'(inhibit-default-init t)					 ;'(inhibit-default-init t)
+ ;; default to unified diffs					 ;; default to unified diffs
+ '(diff-switches "-u"))						 '(diff-switches "-u"))
+
+;;; uncomment for CJK utf-8 support for non-Asian users		;;; uncomment for CJK utf-8 support for non-Asian users
+;; (require 'un-define)						;; (require 'un-define)
+Only in /home/artis: .emacs~
+Only in /home/artis: git
+Only in /home/artis: .gitconfig
+Only in /home/artis: .java
+diff -y /etc/skel/.kshrc /home/artis/.kshrc
+# .kshrc							# .kshrc
+
+# Source global definitions					# Source global definitions
+if [ -f /etc/kshrc ]; then					if [ -f /etc/kshrc ]; then
+	. /etc/kshrc							. /etc/kshrc
+fi								fi
+
+# use emacs editing mode by default				# use emacs editing mode by default
+set -o emacs							set -o emacs
+
+# User specific aliases and functions				# User specific aliases and functions
+
+Only in /home/artis: .kshrc~
+Only in /home/artis: .lesshst
+Only in /home/artis: .local
+Common subdirectories: /etc/skel/.mozilla and /home/artis/.mozilla
+Only in /home/artis: Music
+Only in /home/artis: .nv
+Only in /home/artis: Pictures
+Only in /home/artis: .pki
+Only in /home/artis: pki
+Only in /home/artis: Public
+Only in /home/artis: .ssh
+Only in /home/artis: Templates
+Only in /home/artis: tigrc
+Only in /home/artis: .updated
+Only in /home/artis: Videos
+Only in /home/artis: .vscode
+diff -y /etc/skel/.zshrc /home/artis/.zshrc
+#								#
+# .zshrc is sourced in interactive shells.			# .zshrc is sourced in interactive shells.
+# It should contain commands to set up aliases,			# It should contain commands to set up aliases,
+# functions, options, key bindings, etc.			# functions, options, key bindings, etc.
+#								#
+
+autoload -U compinit						autoload -U compinit
+compinit							compinit
+
+#allow tab completion in the middle of a word			#allow tab completion in the middle of a word
+setopt COMPLETE_IN_WORD						setopt COMPLETE_IN_WORD
+
+## keep background processes at full speed			## keep background processes at full speed
+#setopt NOBGNICE						#setopt NOBGNICE
+## restart running processes on exit				## restart running processes on exit
+#setopt HUP							#setopt HUP
+
+## history							## history
+#setopt APPEND_HISTORY						#setopt APPEND_HISTORY
+## for sharing history between zsh processes			## for sharing history between zsh processes
+#setopt INC_APPEND_HISTORY					#setopt INC_APPEND_HISTORY
+#setopt SHARE_HISTORY						#setopt SHARE_HISTORY
+
+## never ever beep ever						## never ever beep ever
+#setopt NO_BEEP							#setopt NO_BEEP
+
+## automatically decide when to page a list of completions	## automatically decide when to page a list of completions
+#LISTMAX=0							#LISTMAX=0
+
+## disable mail checking					## disable mail checking
+#MAILCHECK=0							#MAILCHECK=0
+
+# autoload -U colors						# autoload -U colors
+#colors								#colors
+Only in /home/artis: .zshrc~
